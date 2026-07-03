@@ -1,33 +1,33 @@
 # 📊 Customer Churn Analysis in Telecommunications
 
-## 📌 Project Overview
+## 📌 Présentation du projet
 
-Customer churn is one of the biggest challenges for telecommunications companies, as losing customers directly impacts revenue and profitability.
+La résiliation des clients (Customer Churn) représente un enjeu majeur pour les entreprises de télécommunications, car elle entraîne une perte directe de revenus et de rentabilité.
 
-This project aims to analyze customer churn, identify the key factors driving customer attrition, predict customers at risk of leaving using Machine Learning, and build an interactive Power BI dashboard to support business decision-making.
-
----
-
-## 🎯 Objectives
-
-- Explore and understand customer behavior through Exploratory Data Analysis (EDA).
-- Identify the main factors influencing customer churn.
-- Build and compare Machine Learning models to predict churn.
-- Estimate customer churn probability and revenue at risk.
-- Design an interactive Power BI dashboard to support retention strategies.
+Ce projet a pour objectif d'analyser les facteurs influençant le churn, de prédire les clients susceptibles de résilier grâce au Machine Learning, puis de concevoir un tableau de bord interactif sous Power BI afin d'aider les décideurs à mettre en place des stratégies de fidélisation.
 
 ---
 
-## 📂 Dataset
+## 🎯 Objectifs
 
-- **Source:** Telco Customer Churn Dataset (Kaggle)
-- **Industry:** Telecommunications
-- **Customers:** 7,043
-- **Target Variable:** `Churn Value`
+- Explorer et comprendre le comportement des clients grâce à une analyse exploratoire (EDA).
+- Identifier les principaux facteurs de résiliation.
+- Construire et comparer plusieurs modèles de Machine Learning.
+- Estimer la probabilité de churn et le revenu à risque.
+- Concevoir un tableau de bord Power BI interactif pour faciliter la prise de décision.
 
 ---
 
-# 🛠️ Technologies Used
+## 📂 Jeu de données
+
+- **Source :** Telco Customer Churn Dataset (Kaggle)
+- **Secteur :** Télécommunications
+- **Nombre de clients :** 7 043
+- **Variable cible :** `Churn Value`
+
+---
+
+# 🛠️ Technologies utilisées
 
 - **Python**
 - **Pandas**
@@ -42,173 +42,170 @@ This project aims to analyze customer churn, identify the key factors driving cu
 
 ---
 
-# 🔍 Exploratory Data Analysis (EDA)
+# 🔍 Prétraitement et Analyse Exploratoire (EDA)
 
-The first phase focused on understanding customer behavior and preparing the dataset.
+La première phase du projet consiste à comprendre les données et à préparer un jeu de données fiable pour les analyses et la modélisation.
 
-### Data Preparation
+## Prétraitement des données
 
-- Data inspection
-- Missing values verification
-- Data type correction
-- Feature engineering
-- Data cleaning
+- Inspection de la structure du jeu de données
+- Vérification des valeurs manquantes et des doublons
+- Correction des types de données
+- Création de nouvelles variables (Feature Engineering)
+- Nettoyage et préparation des données
 
-### Exploratory Analysis
+## Analyse exploratoire
 
-The analysis focused on:
+L'analyse s'est concentrée sur :
 
-- Customer demographics
-- Customer tenure
-- Contract types
-- Internet services
-- Payment methods
-- Monthly charges
-- Customer Lifetime Value (CLTV)
-- Financial impact of churn
+- Les caractéristiques démographiques des clients
+- L'ancienneté des clients
+- Les types de contrat
+- Les services Internet souscrits
+- Les méthodes de paiement
+- Les dépenses mensuelles
+- La valeur client (CLTV)
+- L'impact financier du churn
 
-### Statistical Validation
+## Validation statistique
 
-To validate the observations, statistical tests were performed:
+Afin de confirmer les observations de l'EDA, plusieurs tests statistiques ont été réalisés :
 
-- **Chi-Square Test** for categorical variables
-- **Independent T-Test** for numerical variables
+- **Test du Chi²** pour mesurer la relation entre les variables catégorielles et le churn.
+- **Test T de Student** pour comparer les variables numériques entre les clients résiliés et non résiliés.
 
 ---
 
 # 🤖 Machine Learning
 
-A classification model was developed to predict the probability of churn for active customers.
+Une phase de Machine Learning a été développée afin de prédire le risque de résiliation des clients encore actifs.
 
-### Workflow
+## Étapes réalisées
 
-- Feature Selection
-- One-Hot Encoding
-- Train/Test Split
-- Class Balancing using SMOTE
-- Model Training
-- Model Comparison
-- Best Model Selection
-- Customer Risk Prediction
+- Sélection des variables explicatives
+- Encodage des variables catégorielles
+- Séparation des données en ensembles d'entraînement et de test
+- Équilibrage des classes avec **SMOTE**
+- Entraînement de plusieurs modèles
+- Comparaison des performances
+- Sélection du meilleur modèle
+- Prédiction du risque de churn
 
 ---
 
-## Models Compared
+## Modèles comparés
 
-- Logistic Regression
+- Régression Logistique
 - Random Forest
 - XGBoost
 
-Models were evaluated using:
+Les modèles ont été évalués à l'aide des métriques suivantes :
 
 - Recall
 - F1-Score
 - ROC-AUC
 
-The selected model was then used to generate:
+Le meilleur modèle a ensuite permis de calculer :
 
-- Churn Probability
-- Risk Level
-- Revenue at Risk
-
----
-
-# 📈 Power BI Dashboard
-
-The project includes a three-page interactive dashboard.
+- La probabilité de churn
+- Le niveau de risque
+- Le revenu annuel à risque
 
 ---
 
-## 📄 Page 1 — Executive Overview
+# 📈 Tableau de bord Power BI
 
-**Business Question**
-
-> What is happening?
-
-Main indicators:
-
-- Total Customers
-- Churn Rate
-- Lost Customers
-- Annual Revenue Lost
-- Average CLTV
-
-Visualizations:
-
-- Churn evolution
-- Revenue loss by contract
-- Churn by tenure
-- Top cities by revenue loss
+Le projet se termine par la création d'un tableau de bord interactif composé de trois pages répondant chacune à une problématique métier.
 
 ---
 
-## 📄 Page 2 — Factors & Risks
+## 📄 Page 1 — Vue Exécutive & Impact Financier
 
-**Business Question**
+**Question métier**
 
-> Why are customers leaving?
+> Que se passe-t-il ?
 
-Analysis includes:
+### Principaux indicateurs
 
-- Most risky contract
-- Average tenure of churners
-- Most associated service
-- Riskiest payment method
-- Churn reasons
-- Churn by services
-- Churn by payment methods
+- Nombre total de clients
+- Taux de churn
+- Nombre de clients perdus
+- Revenu annuel perdu
+- CLTV moyen
 
----
+### Visualisations
 
-## 📄 Page 3 — Predictive Analysis
-
-**Business Question**
-
-> Which customers should be targeted?
-
-Main KPIs:
-
-- High-risk active customers
-- Revenue at risk
-- Average churn probability
-- Average CLTV at risk
-
-Visualizations:
-
-- Risk level distribution
-- Probability vs Revenue at Risk
-- Top high-risk customers
-- Business recommendations
+- Évolution du churn
+- Revenu perdu par type de contrat
+- Taux de churn par ancienneté
+- Top des villes les plus impactées
 
 ---
 
-# 💡 Key Insights
+## 📄 Page 2 — Facteurs & Causes de Résiliation
 
-- Month-to-Month contracts have the highest churn rate.
-- Customers with shorter tenure are more likely to leave.
-- Customers without Online Security show a significantly higher churn rate.
-- Electronic Check is the payment method most associated with churn.
-- Machine Learning enables proactive identification of customers likely to churn before they actually leave.
+**Question métier**
 
----
+> Pourquoi les clients résilient-ils ?
 
-# 📊 Business Recommendations
+### Analyses réalisées
 
-- Prioritize retention efforts for high-risk customers.
-- Focus first on customers with the highest revenue at risk.
-- Encourage migration to annual contracts.
-- Promote Online Security offers.
-- Encourage automatic payment methods.
+- Contrat le plus risqué
+- Ancienneté moyenne des churners
+- Service le plus associé au churn
+- Méthode de paiement la plus risquée
+- Principales raisons de résiliation
+- Taux de churn par service
+- Taux de churn par méthode de paiement
 
 ---
 
-# 🚀 Future Improvements
+## 📄 Page 3 — Analyse Prédictive
 
-- Deploy the model using an API.
-- Automate predictions with scheduled refresh.
-- Integrate real-time customer data.
-- Monitor churn continuously using Power BI Service.
+**Question métier**
+
+> Quels clients faut-il cibler en priorité ?
+
+### Principaux indicateurs
+
+- Nombre de clients actifs à risque élevé
+- Revenu annuel à risque
+- Probabilité moyenne de churn
+- CLTV moyen des clients à risque
+
+### Visualisations
+
+- Répartition des niveaux de risque
+- Relation entre probabilité de churn et revenu à risque
+- Top des clients à risque
+- Recommandations métier
 
 ---
 
+# 💡 Principaux enseignements
+
+- Les contrats **Month-to-Month** présentent le taux de churn le plus élevé.
+- Les nouveaux clients sont davantage susceptibles de résilier.
+- L'absence du service **Online Security** augmente significativement le risque de churn.
+- Le paiement par **Electronic Check** est fortement associé au churn.
+- Le Machine Learning permet d'identifier de manière proactive les clients à risque avant leur résiliation.
+
+---
+
+# 📊 Recommandations métier
+
+- Prioriser les actions de fidélisation sur les clients à risque élevé.
+- Cibler en priorité les clients présentant le revenu à risque le plus important.
+- Encourager la migration vers des contrats annuels.
+- Promouvoir le service **Online Security**.
+- Favoriser les modes de paiement automatiques.
+
+---
+
+# 🚀 Perspectives
+
+- Automatiser le pipeline de traitement des données.
+- Mettre à jour automatiquement les prédictions.
+- Déployer le modèle via une API.
+- Intégrer des données en temps réel pour améliorer les performances du modèle.
 
